@@ -1,20 +1,21 @@
-# Yazılım Mimarisi Ve Tasarım Ödevi
+# YazÄ±lÄ±m Mimarisi Ve TasarÄ±m Ã–devi
 
-# Factory Design(Fabrika Tasarım Deseni)
+# Factory Design(Fabrika TasarÄ±m Deseni)
 
-Bu tasarım deseninde nesne yaratma sorumluluğu belirli bir sınıfın içindeki belirli bir metota verlilir. Bu tasarım deseninde bu sınıf dışında bir interface sınıf bulunur ve bu interface sınıftan türeyen sınıflar bulunur. Nesne yaratma sorumluluğunu alan metot içine aldığı parametrelere göre interface sınıfından türeyen sınıfları oluşturur. 
-
-
-## Sınıf Diagramı
+Bu tasarÄ±m deseninde nesne yaratma sorumluluÄŸu belirli bir sÄ±nÄ±fÄ±n iÃ§indeki belirli bir metota verlilir. Bu tasarÄ±m deseninde bu sÄ±nÄ±f dÄ±ÅŸÄ±nda bir interface sÄ±nÄ±f bulunur ve bu interface sÄ±nÄ±ftan tÃ¼reyen sÄ±nÄ±flar bulunur. Nesne yaratma sorumluluÄŸunu alan metot iÃ§ine aldÄ±ÄŸÄ± parametrelere gÃ¶re interface sÄ±nÄ±fÄ±ndan tÃ¼reyen sÄ±nÄ±flarÄ± oluÅŸturur. 
 
 
-Interaface sınıfımızın yapısı şu şekildedir
+## SÄ±nÄ±f DiagramÄ±
+
+![Factory Disagn](https://github.com/Serhatcck/Factory-Design/blob/master/FactoryDesignClass.PNG)
+
+Interaface sÄ±nÄ±fÄ±mÄ±zÄ±n yapÄ±sÄ± ÅŸu ÅŸekildedir
    ```java
 public interface ProtocolInterface {  
     public void CreateConnection();  
 }
 ```
-   Interface sınıfından türeyen alt sınıfları ise gerekli işlemleri yaparak metodu çalıştırırlar. Örnek bir implement sınıf:
+   Interface sÄ±nÄ±fÄ±ndan tÃ¼reyen alt sÄ±nÄ±flarÄ± ise gerekli iÅŸlemleri yaparak metodu Ã§alÄ±ÅŸtÄ±rÄ±rlar. Ã–rnek bir implement sÄ±nÄ±f:
    ```java
 
 public class FtpClass implements ProtocolInterface{  
@@ -30,7 +31,7 @@ public class FtpClass implements ProtocolInterface{
 }
 ```
 
-Nesne yaratma sorumluluğu olan sınıf ise. Gerekli kontrolleri yaparak gereken sınıfı oluşturur:
+Nesne yaratma sorumluluÄŸu olan sÄ±nÄ±f ise. Gerekli kontrolleri yaparak gereken sÄ±nÄ±fÄ± oluÅŸturur:
    ```java
 public class CreateProtocol {  
     enum ChooseType{  
@@ -57,7 +58,7 @@ public class CreateProtocol {
 }
 ```
 
-Main sınıfımız ise:
+Main sÄ±nÄ±fÄ±mÄ±z ise:
    ```java
 public class Protocol {  
     public static void main (String[] args)  
@@ -74,4 +75,4 @@ public class Protocol {
     }  
 }
 ```
-Şeklinde çalışır
+Åeklinde Ã§alÄ±ÅŸÄ±r
